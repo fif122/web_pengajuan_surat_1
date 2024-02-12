@@ -1,0 +1,146 @@
+.type-1 {
+    display: flex;
+    flex-direction: column;
+    line-height: var(--LINE-HEIGHT);
+}
+
+.type-1 input,
+.type-1 textarea,
+.type-1 select {
+    padding: var(--PADDING-BUTTON);
+    color: var(--TEXT-COLOR-1);
+    box-sizing: border-box;
+    margin-top: 8px;
+    border: var(--BORDER-3);
+    border-radius: var(--RADIUS-2);
+    font-size: 13px;
+}
+
+.type-1 input:focus,
+.type-1 textarea:focus,
+.type-1 select:focus {
+    outline: var(--LIGHT-BLUE-BORDER);
+    outline-offset: 0;
+    border: var(--BORDER-3);
+}
+
+.type-1 textarea {
+    height: 100px;
+    resize:vertical;
+}
+
+#date {
+    width: 180px;
+}
+
+.type-1,
+.form-button-type {
+    margin: 30px 20px;
+}
+
+.type-text {
+    margin: 0 20px;
+    margin-bottom: 30px;
+}
+
+.text-list {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    padding-top: 6px;
+    text-align: justify;
+    margin-left: 3px;
+}
+
+
+.type-1:first-of-type {
+    margin-top: 0;
+}
+
+.form-button-type {
+    margin-bottom: 10px;
+}
+
+.form-button-type .grid-1 {
+    display: grid;
+    grid-template-columns: 1fr 125px 125px 125px;
+    gap: 5px;
+}
+
+.form-button button,
+.form-button a {
+    cursor: pointer;
+    height: 40px;
+    width: 125px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 0;
+}
+
+.form-button a {
+    display: grid;
+    place-content: center;
+}
+
+.form-button .gray-button {
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+    color: var(--TEXT-COLOR-1);
+}
+
+.form-button .gray-button:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.form-button .green-button {
+    background-color: var(--GREEN);
+    border-radius: var(--RADIUS-2);
+    color: white;
+}
+
+.form-button .green-button:hover {
+    background-color: #008b6b;
+}
+
+.form-button .red-button {
+    background-color: var(--RED);
+    border-radius: var(--RADIUS-2);
+    color: white;
+}
+
+.form-button .red-button:hover {
+    background-color: var(--RED-HOVER);
+}
+
+@media screen and (max-width: 768px) {
+    .type-1,
+    .form-button-type {
+        margin: 30px 0px;
+    }
+
+    .type-text {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+
+    .form-button-type .grid-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .form-button-type {
+        margin-bottom: 0;
+    }
+
+    .form-button button,
+    .form-button a {
+        width: 100%;
+    }
+}
+
+ol {margin-left: 23px;}
+
+ol a {color: var(--MAIN-COLOR-1);}
+
+ol a:hover {color: var(--LINK-HOVER);}
+

@@ -1,0 +1,125 @@
+.table-content {
+    overflow-x: auto;
+    margin-bottom: 25px;
+    border: var(--BORDER-1);
+}
+
+.jenis-table {
+    border-collapse: collapse;
+}
+
+.jenis-table tr th {
+    border-bottom: var(--TABLE-BORDER-1);
+    background-color: var(--LIGHT-GRAY-1);
+    height: 40px;
+    padding: 0 15px;
+}
+
+.jenis-table tr td {
+    border-bottom: var(--TABLE-BORDER-2);
+    height: 40px;
+    padding: 0 15px;
+}
+
+.jenis-table tr:last-child td {
+    border: 0;
+}
+
+.jenis-table tr:not(:first-child):hover {
+    background-color: var(--TABLE-HOVER);
+}
+
+.jenis-table tr td,
+.jenis-table tr th {
+    white-space: nowrap;
+}
+
+.jenis-table tr th:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.jenis-table tr td:nth-child(1),
+.jenis-table tr th:nth-child(1),
+.jenis-table tr td:nth-child(3),
+.jenis-table tr th:nth-child(3) {
+    text-align: center;
+}
+
+.jenis-table tr td:nth-child(2),
+.jenis-table tr th:nth-child(2) {
+    text-align: left;
+    width: 100%;
+}
+
+.jenis-table tr td:nth-child(3),
+.jenis-table tr th:nth-child(3) {
+   padding-right: 100px;
+}
+
+.jenis-table a {
+    display: grid;
+    width: 100px;
+    height: 30px;
+    place-content: center;
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-1);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+    font-weight: 500;
+}
+
+.jenis-table a:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-3);
+}
+
+@media screen and (max-width: 1200px){
+    .jenis-table tr td:nth-child(3),
+    .jenis-table tr th:nth-child(3) {
+        padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .jenis-table tr td:nth-child(3),
+    .jenis-table tr th:nth-child(3) {
+        padding-right: 25px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .jenis-table tr td:nth-child(3),
+    .jenis-table tr th:nth-child(3) {
+        padding-right: 17px;
+    }
+
+    .table-content {
+        border: var(--BORDER-1);
+    }
+
+}
+
+/* BEBAS KEUANGAN */
+.bebas-keuangan {
+    margin: 5px 0 50px 0;
+}
+
+.bebas-keuangan div {
+    margin-top: 20px;
+}
+
+.bebas-keuangan a {
+    padding: var(--PADDING-BUTTON);
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-1);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+}
+
+.bebas-keuangan a:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-3);
+}

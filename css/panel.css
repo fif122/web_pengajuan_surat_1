@@ -1,0 +1,33 @@
+/* PANEL */
+.panel {
+    margin-top: 20px;
+    margin-bottom: 35px;
+    border: var(--BORDER-1);
+    border-radius: var(--RADIUS-1);
+    color: var(--TEXT-COLOR-1);
+}
+
+/* HEADER PANEL */
+.panel-heading {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--LIGHT-GRAY-1);
+    padding: 10px 15px;
+    border-radius: var(--RADIUS-TOP-1);
+    border-bottom: var(--BORDER-1);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.panel-heading span {
+    font-size: 18px;
+    margin: 1px 6px 0 0;
+}
+
+/* CONTENT PANEL */
+.panel-content {
+    background-color: white;
+    border-radius: var(--RADIUS-BOTTOM-1);
+    padding: 17px;
+}

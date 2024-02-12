@@ -1,0 +1,11 @@
+.status-green {
+    background-color: var(--GREEN);
+}
+
+.status-yellow {
+    background-color: var(--YELLOW);
+}
+
+.status-red {
+    background-color: var(--RED);
+}

@@ -1,0 +1,191 @@
+/* EXECUTION INFO */
+.execution-info {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    margin-bottom: 20px;
+}
+
+.execution-info div {
+    padding: 5px 0;
+}
+
+.execution-info div:nth-child(odd) {
+    font-weight: 700;
+}
+
+.execution-status {
+    font-weight: 700;
+    width: 80px;
+    text-align: center;
+    color: white;
+    border-radius: var(--RADIUS-2);
+}
+
+.feedback {
+    flex-direction: row !important;
+}
+
+.feedback span {
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+/* CHECKLIST */
+.checklist-execution {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.checklist-section {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+    padding: 1.5px;
+    padding-left: 30px;
+}
+
+.checklist-section input {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+}
+
+.checklist-section:hover input ~ .checkmark {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.checklist-section input:checked ~ .checkmark {
+    background-color: #139dff;
+    border: solid #139dff 1px;
+    outline: var(--LIGHT-BLUE-BORDER);
+}
+
+.checkmark:after  {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checklist-section input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checklist-section .checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* RADIO */
+.status-radio {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-section {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    width: fit-content;
+    padding: 1.5px;
+    padding-left: 28px;
+}
+
+.radio-section input {
+    display: none;
+}
+
+.radiomark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: 50%;
+    border: var(--BORDER-3);
+}
+
+.radio-section:hover input ~ .radiomark {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.radio-section input:checked ~ .radiomark {
+    background-color: #139dff;
+    border: solid #139dff 1px;
+    outline: var(--LIGHT-BLUE-BORDER);
+}
+
+.radiomark:after  {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-section input:checked ~ .radiomark:after {
+    display: block;
+}
+
+.radio-section .radiomark:after {
+    left: 4px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .checklist-execution {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+}
+
+.upload-file input {
+    border: none;
+    padding: 0;
+}
+
+.upload-file input[type=file]::file-selector-button {
+    margin-right: 10px;
+    padding: var(--PADDING-BUTTON);
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+    cursor: pointer;
+}
+
+.upload-file input[type=file]::file-selector-button:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+
+.file-upload:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}

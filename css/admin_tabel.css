@@ -1,0 +1,344 @@
+/* PANEL */
+/* .table-panel {
+    margin: 40px 0;
+}
+
+.table-panel-heading {
+    font-size: 14px;
+    font-weight: 500;
+    background-color: var(--LIGHT-GRAY-1);
+    padding: 10px 15px;
+    border: var(--BORDER-1);
+
+    display: flex;
+    flex-direction: row;
+}
+
+.table-panel-heading span {
+    font-size: 18px;
+    margin: 1px 6px 0 0;
+}
+
+.table-panel-content {
+    background-color: white;
+    border-bottom: var(--BORDER-1);
+}
+ */
+
+/* TOP BUTTON */
+.admin-top-button {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.admin-top-button button,
+.admin-top-button select {
+    padding: 4px;
+    width: 120px;
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+    font-size: 13px;
+}
+
+.admin-top-button button:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.admin-top-button button {
+    margin-right: 10px;
+}
+
+.admin-top-button select:focus {
+    outline: var(--LIGHT-BLUE-BORDER);
+    outline-offset: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .admin-top-button {
+        flex-direction: column;
+    }
+
+    .admin-top-button form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin-top-button button {
+        margin: 10px 0 0 0;
+    }
+}
+
+/* TABLE */
+.admin-table-size {
+    overflow:scroll;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border: var(--BORDER-3);
+    max-width: 1400px;
+    margin: 20px auto;
+}
+
+.admin-table {
+    border-collapse: collapse;
+    width: 1400px !important;
+}
+
+.admin-table td{
+    padding: 10px 15px;
+    border-bottom: var(--BORDER-1) !important;
+}
+
+.admin-table-title th {
+    padding: 10px 15px;
+    border-top: var(--BORDER-3) !important;
+    background-color: var(--LIGHT-GRAY-1);
+}
+
+.admin-table tbody tr:hover {
+    background-color: #e6f6ff;
+}
+
+.admin-table th:nth-child(2),
+.admin-table td:nth-child(2),
+.admin-table th:nth-child(4),
+.admin-table td:nth-child(4) {
+    width: 190px !important;
+    text-align: left;
+}
+
+.admin-table th:nth-child(3),
+.admin-table td:nth-child(3) {
+    width: 160px !important;
+    text-align: left;
+}
+
+.admin-table th:nth-child(1),
+.admin-table td:nth-child(1),
+.admin-table th:nth-child(5),
+.admin-table td:nth-child(5),
+.admin-table th:nth-child(6),
+.admin-table td:nth-child(6),
+.admin-table th:nth-child(7),
+.admin-table td:nth-child(7) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.admin-table td:nth-child(8) div {
+    font-weight: 700;
+    color: white;
+    padding: 4px 8px;
+    border-radius: var(--RADIUS-2);
+    width: 85px;
+    text-align: center;
+}
+
+.admin-table td:nth-child(9) a,
+.admin-table td:nth-child(10) a {
+    background-color: var(--LIGHT-GRAY-1);
+    border: var(--BORDER-3);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+    border-radius: var(--RADIUS-2);
+    padding: 5.5px 8px;
+    width: 100px;
+}
+
+.admin-table td:nth-child(9) a:hover,
+.admin-table td:nth-child(10) a:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.dataTables_length,
+.dataTables_filter {
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.dataTables_filter input,
+.dataTables_length select {
+    padding: 4px !important;
+    color: var(--TEXT-COLOR-1) !important;
+    box-sizing: border-box !important;
+    margin-top: 8px !important;
+    border: var(--BORDER-3) !important;
+    border-radius: var(--RADIUS-2) !important;
+    font-size: 13px !important;
+}
+
+.dataTables_filter,
+.dataTables_paginate,
+.dataTables_length,
+.dataTables_info {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dataTables_length select {
+    width: 60px;
+}
+
+.dataTables_filter input:focus,
+.dataTables_length select:focus {
+    outline: var(--LIGHT-BLUE-BORDER);
+    outline-offset: 0;
+    border: var(--BORDER-3);
+}
+
+.dataTables_info,
+.dataTables_paginate {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    .dataTables_info,
+    .dataTables_paginate {
+        float: left !important;
+    }
+    .dataTables_info {
+        margin-right: 20px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter {
+      float: inherit !important;
+      text-align: inherit !important;
+    }
+
+    .dataTables_length {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* EXPORT POP UP */
+.admin-export {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #00000066;
+}
+
+.export-setting {
+    background-color: white;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: var(--RADIUS-1);
+    border: var(--BORDER-1);
+}
+
+.closeExport {
+    color: #b7b7b7;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 14px;
+}
+
+.closeExport:hover{
+    color: #a0a0a0;
+}
+
+.export-title {
+    background-color: var(--MAIN-COLOR-1);
+    padding: 8px 100px;
+    margin: 0 auto;
+    border-radius: var(--RADIUS-BOTTOM-1);
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+.export-setting form {
+    margin-top: 35px;
+}
+
+.export-flex:not(:last-child) {
+    display: flex;
+    flex-direction: column;
+}
+
+.export-flex:last-child {
+    padding-top: 20px;
+}
+
+.export-flex {
+    padding: 15px;
+    margin: 0;
+}
+
+.export-flex button,
+.export-flex a,
+.export-flex select {
+    padding: 10px;
+    width: 100%;
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+    font-size: 13px;
+}
+
+.export-flex select {
+    margin-top: 5px;
+}
+
+.export-flex select:focus {
+    outline: var(--LIGHT-BLUE-BORDER);
+    outline-offset: 0;
+}
+
+.export-flex button:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.export-flex a:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+@media screen and (max-width: 768px) {
+    .admin-export {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .export-setting {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .admin-export {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .export-title {
+        padding: 8px 30px;
+    }
+}

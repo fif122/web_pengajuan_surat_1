@@ -1,0 +1,46 @@
+.footer {
+    overflow: hidden;
+    background-color: white;
+    border-top: var(--BORDER-1);
+    color: var(--TEXT-COLOR-1);
+}
+
+.footer-left,
+.footer-right {
+    padding: 17px 0;
+}
+
+.footer-left {
+    float: left;
+}
+
+.footer-right {
+    float: right;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-right img {
+    margin: 0 3px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--MAIN-COLOR-1);
+}
+
+@media screen and (max-width: 992px) {
+    .footer-left {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-left {
+        width: 100%;
+    }
+
+    .footer-right {
+        display: none;
+    }
+}

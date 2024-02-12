@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+<div class="web-flex-2">
+    <div class="container2 login-container">
+        <div class="mail-logo">
+            <div><b>LISA</b> STT-NF</div>
+            <div><b>L</b>ayanan <b>I</b>nformasi <b>S</b>urat <b>A</b>kademik</div>
+        </div>
+        <div class="login-content">
+            <div class="sttnf-logo">
+                <img src="img/Logo_STTNF.png" alt="">
+            </div>
+
+            <form method="POST" action="#">
+
+                <div class="input-text">
+                    <label for="email">Email</label>
+                    <input class="#" id="email" type="email" name="email" required="required">
+                    <div class="alert"></div>
+                </div>
+
+                <div class="input-text">
+                    <label for="password">Password</label>
+
+                    <input class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm block mt-1 w-full" id="password" type="password" name="password" required="required">
+                    <span id="eyes" onclick="eyesPassword()" class="material-symbols-outlined eyes-password">visibility</span>
+                    <div class="alert"></div>
+                </div>
+
+                <button>Login</button>
+
+                <div class="forgot-password">
+                    <a href="#">Forgot your password?</a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/* WELCOME */
+.welcome {
+    margin-top: 25px;
+    color: var(--MAIN-COLOR-1);
+}
+
+.welcome p:nth-child(1) {
+    font-size: 20px;
+}
+
+.welcome p:nth-child(2) {
+    font-size: 30px;
+}
+
+.welcome p:nth-child(3) {
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+/* HOME LINK */
+.text {
+    margin-top: 35px;
+    margin-bottom: 8px;
+    color: var(--TEXT-COLOR-1);
+}
+
+.home-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-button a{
+    background-color: white;
+    color: var(--MAIN-COLOR-1);
+    border-radius: var(--RADIUS-1);
+    min-height: 65px;
+    margin: 5px 0;
+    border: var(--BORDER-1);
+    text-decoration: none;
+    box-shadow: var(--BOX-SHADOW-2);
+    padding: 5px;
+
+    display: grid;
+    grid-template-columns: 50px 1fr 40px;
+}
+
+.home-button a div:nth-child(1),
+.home-button a div:nth-child(3) {
+    display: grid;
+    place-content: center;
+}
+
+.home-button a div:nth-child(2) {
+    display: grid;
+    place-content: center start;
+    font-weight: 700;
+}
+
+.home-button a:hover {
+    background-color: #ebedf1;
+}
+
+.home-button:last-child {
+    margin-bottom: 50px;
+}

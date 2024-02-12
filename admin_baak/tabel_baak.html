@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISA STT-NF - Pengajuan Surat</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/admin_tabel.css">
+    <link rel="stylesheet" href="../css/status_color.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+    <script src="../js/navbar.js" defer></script>
+</head>
+<body>
+    <div class="web-flex-1">
+        <!-- NAVBAR -->
+        <div class="nav-sticky">
+            <div class="topnav">
+                <div class="nav-container">
+
+                    <a href="#" class="nav-link nav-logo">
+                        <div class="nav-link-row">
+                            <p><b>LISA </b> STT-NF</p>
+                        </div>
+                    </a>
+
+                    <div class="vertical-nav" data-dropdown>
+                        <a class="nav-link menu-button" data-dropdown-button>
+                            <img src="../img/menu_button.svg" alt="">
+                        </a>
+                        <div class="nav-menu">
+
+                            
+
+                            <!-- DROPDOWN USER -->
+                            <div class="dropdown2-button" data-dropdown-1>
+                                <a class="nav-link" data-dropdown-button-1>
+                                    <div class="nav-link-row">
+                                        <img src="../img/no-pic3.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="dropdown2">
+                                    <div class="card-info">
+                                        <img src="../img/no-pic3.png" class="card-content" alt="">
+                                        <p class="card-content">Nama Admin BAAK</p>
+                                        <p class="card-content"></p>
+                                        <p class="card-content">admin.baak@mail.com</p>
+                                        <p class="card-content">Admin BAAK</p>
+                                    </div>
+                                    <div class="card-button">
+                                        <form method="POST">
+                                            <button type="submit">
+                                                <span class="material-symbols-outlined"> logout </span>
+                                                <div>Log Out</div>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content container1">
+            <div class="breadcrumbs">
+                <a href="admin_baak_home.html">Home</a> /
+                <a href="#">BAAK</a>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="material-symbols-outlined"> mail </span>
+                    Pengadministrasi Persuratan BAAK    
+                </div>
+
+                <div class="panel-content">
+                    <div class="admin-top-button">
+                        <div><!-- Blank --></div>
+                        <div><!-- Blank --></div>
+                        <div>
+                            <button id="exportBtn">Export Data Excel</button>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-size">
+                        <table class="admin-table" id="myTable">
+                            <thead>
+                                <tr class="admin-table-title">
+                                    <th>#</th>
+                                    <th>Nama Mahasiswa</th>
+                                    <th>NIM</th>
+                                    <th>Jenis Surat</th>
+                                    <th>Jurusan</th>
+                                    <th>Diajukan</th>
+                                    <th>Diselesaikan</th>
+                                    <th>Status</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>1</td>
+                                    <td>Nama Mahasiswa</td>
+                                    <td>01101XXX</td>
+                                    <td>Surat Permohonan Penelitian Tugas Akhir</td>
+                                    <td>TI</td>
+                                    <td>09 Feb 2023 03:41:21</td>
+                                    <td>-</td>
+                                    <td><div class="status-yellow">Diproses</div></td>
+                                    <td>
+                                        <div style="width: 200px"><a href="eksekusi_3_diproses.html">Eksekusi</a> | <a href="../pdf/TugasAkhir-1.pdf" target="_blank">Detail Surat</a></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>2</td>
+                                    <td>Nama Mahasiswa</td>
+                                    <td>01101XXX</td>
+                                    <td>Surat Permohonan Penelitian Tugas Akhir</td>
+                                    <td>TI</td>
+                                    <td>09 Feb 2023 03:41:21</td>
+                                    <td>09 Feb 2023 03:45:19</td>
+                                    <td><div class="status-green">Disetujui</div></td>
+                                    <td>
+                                        <div style="width: 200px"><a href="eksekusi_3_disetujui.html">Eksekusi</a> | <a href="../pdf/TugasAkhir-2.pdf" target="_blank">Detail Surat</a></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>3</td>
+                                    <td>Nama Mahasiswa</td>
+                                    <td>01101XXX</td>
+                                    <td>Surat Permohonan Penelitian Tugas Akhir</td>
+                                    <td>TI</td>
+                                    <td>09 Feb 2023 03:41:21</td>
+                                    <td>09 Feb 2023 03:45:19</td>
+                                    <td><div class="status-red">Ditolak</div></td>
+                                    <td>
+                                        <div style="width: 200px"><a href="eksekusi_3_ditolak.html">Eksekusi</a> | <a href="../pdf/TugasAkhir-1.pdf" target="_blank">Detail Surat</a></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>4</td>
+                                    <td>Nama Mahasiswa</td>
+                                    <td>01101XXX</td>
+                                    <td>Surat Pengajuan Keterangan Cuti Akademik</td>
+                                    <td>TI</td>
+                                    <td>09 Feb 2023 03:41:21</td>
+                                    <td>-</td>
+                                    <td><div class="status-yellow">Diproses</div></td>
+                                    <td>
+                                        <div style="width: 200px"><a href="eksekusi_5_diproses.html">Eksekusi</a></div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>5</td>
+                                    <td>Nama Mahasiswa</td>
+                                    <td>01101XXX</td>
+                                    <td>Surat Pengajuan Keterangan Cuti Akademik</td>
+                                    <td>TI</td>
+                                    <td>09 Feb 2023 03:41:21</td>
+                                    <td>09 Feb 2023 03:45:19</td>
+                                    <td><div class="status-green">Diterima</div></td>
+                                    <td>
+                                        <div style="width: 200px"><a href="eksekusi_5_diterima.html">Eksekusi</a></div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container1">
+                <div class="footer-left">
+                    <b>
+                        Copyright © 2023
+                        <a href="#">Sekolah Tinggi Teknologi Terpadu Nurul Fikri</a>
+                    </b>
+                    . All rights reserved
+                </div>
+                <div class="footer-right">
+                    Made with
+                    <img src="../img/Love.svg" alt="">
+                    &
+                    <img src="../img/coffee.svg" alt="">
+                    by <a href="#" style="margin-left: 3px;">LTSI STT-NF</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- DataTable Script -->
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+    
+</body>
+</html>

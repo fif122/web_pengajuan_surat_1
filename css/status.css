@@ -1,0 +1,124 @@
+.status-pengajuan {
+    border: var(--BORDER-1);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px 15px 20px;
+    min-height: 150px;
+    margin: 30px 50px;
+    border-radius: var(--RADIUS-1);
+    box-shadow: var(--BOX-SHADOW-2);
+}
+
+.status-pengajuan:first-child {
+    margin-top: 45px;
+}
+
+/* .status-section:not(:first-child) {
+    border: solid 2px sandybrown;
+} */
+
+.status-section {
+    color: var(--MAIN-COLOR-1);
+    text-align: justify;
+    line-height: var(--LINE-HEIGHT);
+}
+
+.status-section:nth-child(1) {
+    color: white;
+    position: absolute;
+    margin-top: -36px;
+    width: 100px;
+    text-align: center;
+    padding: 4px 0;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-left: -5px;
+    z-index: 1;
+}
+
+
+.status-section:nth-child(3),
+.status-section:nth-child(4) {
+    flex: 1;
+}
+
+.status-section:nth-child(3){
+    padding-right: 15px;
+}
+
+.status-section:nth-child(4){
+    border-left: var(--BORDER-1);
+    padding: 0 15px;
+}
+
+
+.status-section:nth-child(2) {
+    width: 110px;
+}
+
+.status-section:nth-child(5) {
+    width: 90px;
+    padding-top: 5px;
+}
+
+.status-section a {
+    padding: var(--PADDING-BUTTON);
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-3);
+    text-decoration: none;
+    color: var(--TEXT-COLOR-1);
+}
+
+.status-section a:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-4);
+}
+
+.status-title {
+    color: var(--TEXT-COLOR-1);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.status-date {
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 1200px){
+    .status-pengajuan {
+        margin: 30px 25px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .status-pengajuan {
+        margin: 30px 10px;
+        flex-direction: column;
+    }
+
+    .status-section:nth-child(2) {
+        display: none;
+    }
+
+    .status-section:nth-child(3) {
+        padding-top: 10px;
+    }
+
+    .status-section:nth-child(4) {
+        margin-top: 20px;
+    }
+
+    .status-section:nth-child(5) {
+        width: auto;
+        height: 50px;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .status-pengajuan {
+        margin: 30px 0;
+    }
+}

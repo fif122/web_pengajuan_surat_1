@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISA STT-NF - Pengajuan Surat</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="../css/panel.css">
+    <link rel="stylesheet" href="../css/footer.css">
+
+    <link rel="stylesheet" href="../css/execution.css">
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="../css/status_color.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+
+    <!-- DataTables JS -->
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+
+    <script src="../js/navbar.js" defer></script>
+</head>
+<body>
+    <div class="web-flex-1">
+        <!-- NAVBAR -->
+        <div class="nav-sticky">
+            <div class="topnav">
+                <div class="nav-container">
+
+                    <a href="#" class="nav-link nav-logo">
+                        <div class="nav-link-row">
+                            <p><b>LISA </b> STT-NF</p>
+                        </div>
+                    </a>
+
+                    <div class="vertical-nav" data-dropdown>
+                        <a class="nav-link menu-button" data-dropdown-button>
+                            <img src="../img/menu_button.svg" alt="">
+                        </a>
+                        <div class="nav-menu">
+
+                            <!-- DROPDOWN USER -->
+                            <div class="dropdown2-button" data-dropdown-1>
+                                <a class="nav-link" data-dropdown-button-1>
+                                    <div class="nav-link-row">
+                                        <img src="../img/no-pic3.png" alt="">
+                                    </div>
+                                </a>
+                                <div class="dropdown2">
+                                    <div class="card-info">
+                                        <img src="../img/no-pic3.png" class="card-content" alt="">
+                                        <p class="card-content">Nama Admin BAAK</p>
+                                        <p class="card-content"></p>
+                                        <p class="card-content">admin.baak@mail.com</p>
+                                        <p class="card-content">Admin BAAK</p>
+                                    </div>
+                                    <div class="card-button">
+                                        <form method="POST">
+                                            <button type="submit">
+                                                <span class="material-symbols-outlined"> logout </span>
+                                                <div>Log Out</div>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="content container1">
+            <div class="breadcrumbs">
+                <a href="admin_perpustakaan_home.html">Home</a> /
+                <a href="tabel_perpustakaan.html">Perpustakaan</a> / 
+                <a href="#">Surat Pengajuan Bebas Perpustakaan Lulus</a>
+            </div>
+            
+            <div class="panel">
+                <div class="panel-heading">
+                    <span class="material-symbols-outlined"> mail </span>
+                    Pengajuan Surat
+                </div>
+
+                <div class="panel-content">
+                    
+                    <div class="type-1">
+                        <div class="execution-info">
+                            <div>Nama</div>
+                            <div>Nama Mahasiswa</div>
+    
+                            <div>NIM</div>
+                            <div>01101XXX</div>
+    
+                            <div>Jenis Surat</div>
+                            <div>Surat Pengajuan Bebas Perpustakaan Lulus</div>
+    
+                            <div>Status</div>
+                            <div class="execution-status status-red">Ditolak</div>
+                        </div>
+                    </div>
+
+                    <div class="type-1">
+                        <label for="answer">Screenshot Upload Jurnal</label>
+                        <input type="text" value="https://drive.google.com" id="" disabled="">
+                    </div>
+
+                    <div class="type-1">
+                        <label for="answer">Softcopy TA</label>
+                        <input type="text" value="https://drive.google.com" id="" disabled="">
+                    </div>
+
+                    <div class="type-1 feedback">
+                        <span class="material-symbols-outlined">contract_edit</span>
+                        <div><b>Feedback</b></div>
+                    </div>
+
+                    <div class="type-1">
+                        <label for="" style="margin-bottom: 10px;">Pengecekan Kelengkapan Dokumen:</label>
+                        <div class="checklist-execution">
+
+                            <label class="checklist-section">tidak memiliki bahan pinjaman pustaka
+                                <input type="checkbox" required="" disabled="">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checklist-section">menyumbang 1 eksemplar buku yang relevan dengan program studi yang diambil (terbitan buku maksimal 3 tahun ke belakang dari tahun kelulusan)
+                                <input type="checkbox" required="" disabled="" checked>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checklist-section">menyerahkan hardcopy TA setelah melakukan perbaikan TA
+                                <input type="checkbox" required="" disabled="" checked>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checklist-section">menunggah softcopy TA dan source code
+                                <input type="checkbox" required="" disabled="" checked>
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checklist-section">menunggah jurnal
+                                <input type="checkbox" required="" disabled="" checked>
+                                <span class="checkmark"></span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="type-1">
+                        <label for="answer">Nomor Surat</label>
+                        <input type="text" id="nomor_surat" name="nomor_surat" placeholder="Nomor Surat" value="">
+                    </div>
+
+                    <div class="type-1">
+                        <label for="answer">Tanggal Surat</label>
+                        <input type="date" id="tanggal_surat" name="tanggal_surat" value="">
+                    </div>
+
+                    <div class="type-1">
+                        <label for="answer">Catatan (optional) :</label>
+                        <textarea name="notes" id="notes" style="height: 130px;">Anda memiliki bahan pinjaman pustaka</textarea>
+                    </div>
+
+                    <div class="form-button-type">
+                        <div class="form-button grid-1">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div><a class="gray-button" id="saveButton" href="tabel_perpustakaan.html">Back</a></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="container1">
+                <div class="footer-left">
+                    <b>
+                        Copyright © 2023
+                        <a href="#">Sekolah Tinggi Teknologi Terpadu Nurul Fikri</a>
+                    </b>
+                    . All rights reserved
+                </div>
+                <div class="footer-right">
+                    Made with
+                    <img src="../img/Love.svg" alt="">
+                    &
+                    <img src="../img/coffee.svg" alt="">
+                    by <a href="#" style="margin-left: 3px;">LTSI STT-NF</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

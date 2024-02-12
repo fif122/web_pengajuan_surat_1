@@ -1,0 +1,31 @@
+/* BREADCRUMBS */
+.breadcrumbs {
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #F5F5F5;
+    color: #c2c2c2;
+    border: var(--BORDER-1);
+    cursor: context-menu;
+    border-radius: var(--RADIUS-2);
+    line-height: var(--LINE-HEIGHT);
+}
+
+.breadcrumbs a {
+    color: var(--MAIN-COLOR-1);
+    text-decoration: none;
+    margin: 0 5px 0 5px;
+}
+
+.breadcrumbs a:first-child {
+    margin: 0 5px 0 0;
+}
+
+.breadcrumbs a:last-child {
+    color: var(--TEXT-COLOR-2);
+    pointer-events: none;
+    margin: 0 0 0 5px;
+}
+
+.breadcrumbs a:not(:last-child):hover {
+    color: var(--LINK-HOVER);
+}

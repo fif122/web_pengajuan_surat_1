@@ -1,0 +1,342 @@
+.nav-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.topnav {
+    background-color: var(--MAIN-COLOR-1);
+}
+
+/*  NAV CONTAINER */
+.nav-container {
+    position: relative;
+    margin: 0 auto;
+    height: var(--NAV-HEIGHT);
+
+    width: 1140px;
+}
+
+@media screen and (max-width: 1200px){
+    .nav-container {width: 940px;}
+}
+
+@media screen and (max-width: 992px) {
+    .nav-container {width: 720px;}
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {width: 100%;}
+}
+
+
+/* NAVBAR BUTTONS */
+.nav-link {
+    float: left;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    padding: var(--NAV-PADDING);
+    height: var(--NAV-HEIGHT);
+
+    display: grid;
+    place-content: center;
+}
+
+.nav-link-row {
+    display: flex;
+    flex-direction: row;
+    pointer-events: none;
+}
+
+.nav-logo {
+    font-size: 18px;
+}
+
+.dropdown1-button {
+    float: left;
+}
+
+.dropdown1-button .nav-link span {
+    margin-top: -1px;
+    font-size: 18px;
+}
+
+.dropdown2-button {
+    float: right;
+}
+
+.dropdown2-button .nav-link div {
+    pointer-events: none;
+}
+
+.dropdown2-button .nav-link img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.menu-button {
+    display: none;
+    user-select: none;
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    padding: 0;
+}
+
+.menu-button img {
+    pointer-events: none;
+}
+
+/* MAHASISWA DROPDOWN */
+.dropdown1 {
+    position: absolute;
+    top: calc(100%);
+    background-color: white;
+    border: var(--BORDER-2);
+    border-radius: var(--RADIUS-1);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--BOX-SHADOW-1);
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown-link {
+    display: flex;
+    flex-direction: row;
+    padding: 4px 20px;
+    text-decoration: none;
+    color: var(--TEXT-COLOR-2);
+}
+
+.dropdown-link span {
+    margin-right: 14px;
+    font-size: 18px;
+}
+
+.dropdown-link:first-child {
+    border-radius: var(--RADIUS-TOP-1);
+}
+
+.dropdown-link:last-child {
+    border-radius: var(--RADIUS-BOTTOM-1);
+}
+
+.dropdown-link:hover {
+    background-color: #E1E3E9;
+    color: var(--TEXT-COLOR-1);
+}
+
+.active,
+.active:hover {
+    background-color: var(--MAIN-COLOR-1);
+    color: white;
+}
+
+/* USER CARD DROPDOWN */
+.dropdown2 {
+    position: absolute;
+    top: calc(100%);
+    border-radius: var(--RADIUS-1);
+    display: flex;
+    flex-direction: column;
+    border: var(--BORDER-2);
+    box-shadow: var(--BOX-SHADOW-1);
+    width: 400px;
+    right: 0;
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-info {
+    text-align: center;
+    background-color: var(--MAIN-COLOR-1);
+    border-radius: var(--RADIUS-TOP-1);
+    color: white;
+}
+
+.card-content {
+    margin-bottom: 2px;
+    overflow: hidden;
+}
+
+.card-content:nth-child(1) {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: 12px auto;
+    border: solid 3px var(--LIGHT-BLUE-1);
+}
+
+.card-content:nth-child(2) {
+    font-weight: 700;
+}
+
+.card-content:nth-child(3) {
+    border-top: white solid 1.5px;
+    margin: 0 20px;
+    margin-bottom: 25px;
+}
+
+.card-content:nth-child(6) {
+    margin-bottom: 15px;
+}
+
+.card-button {
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-BOTTOM-1);
+    display: grid;
+    place-content: center;
+}
+
+.card-button button {
+    padding: var(--PADDING-BUTTON);
+    background-color: var(--LIGHT-GRAY-1);
+    border-radius: var(--RADIUS-2);
+    border: var(--BORDER-1);
+    color: var(--TEXT-COLOR-1);
+    width: 200px;
+    margin: 8px 0;
+    height: 42px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    place-content: center;
+}
+
+.card-button button div {
+    margin-top: 4px;
+    margin-left: 8px;
+}
+
+.card-button button:hover {
+    background-color: var(--LIGHT-GRAY-2);
+    border: var(--BORDER-3);
+}
+
+/* TO DISPLAY DROPDOWN */
+.dropdown1-button.active-1 > .nav-link + .dropdown1,
+.dropdown2-button.active-1 > .nav-link + .dropdown2 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* CLICKED DROPDOWN LINK COLOR */
+.dropdown1-button.active-1 > .nav-link,
+.dropdown2-button.active-1 > .nav-link,
+.dropdown1-button .nav-link:hover,
+.dropdown2-button .nav-link:hover {
+    background-color: var(--MAIN-COLOR-2);
+}
+
+/* VERTICAL */
+@media screen and (max-width: 768px) {
+    .nav-container {
+        position: static;
+    }
+    .dropdown1-button {
+        float: none;
+    }
+
+    .dropdown1-button .nav-link  {
+        place-content: center start;
+    }
+
+    .dropdown1-button
+    .nav-link
+    .icon-right {
+        position: absolute;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        background-color: var(--MAIN-COLOR-1);
+        z-index: 1;
+        top: calc(100%);
+        width: 100%;
+        border-top: solid 1.5px var(--LIGHT-BLUE-1);
+
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .vertical-nav.active > .nav-link + .nav-menu {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .nav-menu a {
+        float: none;
+    }
+
+    /* MAHASIWA DROPDOWN */
+    .dropdown1 {
+        margin-left: 0;
+        border-radius: 0;
+        border: 0;
+        position: relative;
+        box-shadow: none;
+
+        display: none;
+    }
+
+    .dropdown1-button.active-1 > .nav-link + .dropdown1 {
+        display: block;
+    }
+
+    .dropdown-link {
+        color: white;
+        background-color: var(--MAIN-COLOR-1);
+        padding-bottom: 5px;
+    }
+
+    .dropdown-link:first-child,
+    .dropdown-link:last-child {
+        border-radius: 0;
+    }
+
+    .dropdown-link:hover {
+        background-color: var(--MAIN-COLOR-2);
+        color: white;
+    }
+
+    .active,
+    .active:hover {
+        background-color: white;
+        color: var(--MAIN-COLOR-2);
+    }
+
+    /* USERNAME NAV-LINK */
+    .dropdown2-button .nav-link {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* USER CARD DROPDOWN */
+    .dropdown2 {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .card-info {
+        border-radius: 0;
+    }
+
+    .card-button {
+        border-radius: 0;
+    }
+}
